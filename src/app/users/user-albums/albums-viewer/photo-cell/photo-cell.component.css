@@ -1,0 +1,17 @@
+div.wrapper {
+  padding-top: 1em;
+  padding-left: 1em;
+}
+
+div {
+  user-select: none;
+}
+img {
+  transition: .3s ease;
+  opacity: 0.70;
+}
+img:hover {
+  transition: .5s ease;
+  opacity: 1.0;
+  cursor: pointer;
+}

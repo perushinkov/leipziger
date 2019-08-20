@@ -1,0 +1,17 @@
+<nav>
+  <ul class="pagination pg-blue">
+    <li class="page-item"
+        [ngClass]="currentPage > 0 ? '' : 'disabled'"
+        (click)="turnToPage(currentPage - 1)">
+      <a class="page-link">Previous</a>
+    </li>
+    <li class="page-item active">
+      <a class="page-link">{{currentPage + 1}}<span class="sr-only">(current)</span></a>
+    </li>
+    <li class="page-item"
+        [ngClass]="currentPage < lastPage ? '' : 'disabled'"
+        (click)="turnToPage(currentPage + 1)">
+      <a class="page-link">Next</a>
+    </li>
+  </ul>
+</nav>

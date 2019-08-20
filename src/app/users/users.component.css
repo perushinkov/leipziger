@@ -1,0 +1,10 @@
+.list-group {
+  max-height: 600px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+/* just for chrome, I guess */
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}

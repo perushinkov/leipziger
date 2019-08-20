@@ -1,0 +1,8 @@
+.chipsHolder {
+  padding: 6px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+pagination {
+  padding-top: 1em;
+  padding-left: 1em;
+}

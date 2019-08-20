@@ -1,0 +1,12 @@
+<span *ngIf="user" [ngClass]="active ? 'active' : ''">
+  <div class="row">
+    <div class="col-4">
+      <fa-icon [icon]="faUser" size="3x"></fa-icon>
+    </div>
+    <div class="col-8">
+      <div class="row">{{user.username}}</div>
+      <div class="row user-text-muted">{{user.email}}</div>
+      <div class="row user-text-muted">{{user.name}}</div>
+    </div>
+  </div>
+</span>

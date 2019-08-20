@@ -1,0 +1,30 @@
+<div class="row h-100">
+  <div class="col-3 verticalGutterCorrection">
+    <div class="card shadow-sm">
+      <div class="card-header">
+        <span class="card-title appCardTitle">Users</span>
+        <fa-icon [icon]="faSearch" class="appCardIcon float-sm-right"></fa-icon>
+      </div>
+      <div>
+        <div *ngIf="users.length > 0" class="list-group list-group-flush">
+          <a *ngFor="let user of users; let userIndex = index"
+             class="list-group-item list-group-item-action"
+             (click)="selectUser(userIndex)"
+             [ngClass]="userIndex == activeUserIndex ? 'active' : ''"
+             [routerLink]="[user.id, 'browse']">
+            <app-user [user]="user" [active]="userIndex == activeUserIndex"></app-user>
+          </a>
+        </div>
+        <div *ngIf="users.length === 0">
+          <a class="list-group-item list-group-item-action">
+            {{loadingMsg}}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+

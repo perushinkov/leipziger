@@ -1,0 +1,8 @@
+<div class="wrapper" *ngIf="photo !== null">
+<div class="row">
+  <img [src]="photo.thumbnailUrl" width="{{size}}" height="{{size}}">
+</div>
+<div class="row">
+  {{photo.title.substr(0, 12)}}
+</div>
+</div>

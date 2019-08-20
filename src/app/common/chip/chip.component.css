@@ -1,0 +1,61 @@
+.chip-lg {
+  display: inline-block;
+  padding: 0 25px;
+  height: 50px;
+  font-size: 18px;
+  line-height: 50px;
+  border-radius: 25px;
+  background-color: #f1f1f1;
+}
+
+.chip-lg img {
+  float: left;
+  margin: 0 10px 0 -25px;
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+}
+
+.closebtn-lg {
+  padding-left: 10px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.closebtn-lg:hover {
+  color: #000;
+}
+
+.chip-sm {
+  display: inline-block;
+  padding: 0 15px;
+  height: 30px;
+  font-size: 12px;
+  line-height: 30px;
+  border-radius: 16px;
+  background-color: #f1f1f1;
+}
+
+.chip-sm img {
+  float: left;
+  margin: 0 6px 0 -16px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+}
+
+.closebtn-sm {
+  padding-left: 6px;
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.closebtn-sm:hover {
+  color: #000;
+}

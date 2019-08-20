@@ -1,0 +1,14 @@
+span {
+  font-size: small;
+}
+.active {
+  color: white;
+}
+
+.user-text-muted {
+  color: gray;
+}
+
+.active .user-text-muted {
+  color: white;
+}

@@ -1,0 +1,42 @@
+<div class="card shadow-sm fillVertical">
+  <div class="card-header">
+    <span class="card-title appCardTitle">Photos</span>
+  </div>
+  <div (drop)="drop($event)"
+       (dragover)="onDragover($event)"
+       class="fillVertical">
+    <div *ngIf="albums.length == 0" class="card-body fillVertical">
+      <h3 class="card-text text-muted"
+          *ngIf="albums.length === 0">Drag in a few albums! :)</h3>
+    </div>
+    <div *ngIf="albums.length > 0" class="fillVertical">
+      <div class="chipsHolder">
+        <span class="text-black-50 font-weight-bolder"> {{photos.length}} photos from: </span>
+        <app-chip
+          *ngFor="let album of albums; let albumIndex = index"
+          [message]="album.title.substr(0, 12) + '...'"
+          (removed)="removeAlbum(albumIndex)"></app-chip>
+      </div>
+      <div class="photosHolder container">
+        <div class="row" *ngFor="let _ of pager.rows; let rowIndex = index">
+          <div class="col" *ngFor="let _ of pager.cols; let colIndex = index">
+            <app-photo-cell
+              [photo]="getPhoto(rowIndex, colIndex)"
+              [size]="pager.thumbnailSize"></app-photo-cell>
+          </div>
+        </div>
+        <app-pagination
+          class="float-right"
+          (pageTurned)="turnToPage($event)"
+          [countPerPage]="pager.entriesPerPage"
+          [itemCount]="photos.length"
+        ></app-pagination>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+

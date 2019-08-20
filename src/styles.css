@@ -1,0 +1,39 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+.appCardIcon {
+  color: rgba(0, 0, 0, 0.50);
+}
+.appCardIcon:hover {
+  color: rgba(0, 0, 0, 0.90);
+  cursor: pointer;
+}
+span.appCardTitle {
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.90);
+  padding-right: 1em;
+}
+body {
+  background-color: #dfdfdf;
+}
+.fillVertical {
+  height: 100%;
+}
+.fillHorizontal {
+  width: 100%;
+}
+.verticalGutter {
+  margin-bottom: 15px;
+}
+.verticalGutterCorrection {
+  margin-bottom: -15px;
+}
+app-albums-viewer {
+  width: 100%;
+}
+
+app-chip {
+  padding-left: 6px;
+}

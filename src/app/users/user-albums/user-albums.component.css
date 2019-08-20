@@ -1,0 +1,10 @@
+.dragReminder {
+  font-family: sans-serif;
+  font-size: large;
+  font-weight: bolder;
+  color: rgba(0, 0, 0, 0.51)
+}
+
+button.albumEntity {
+  margin: 0.3em;
+}

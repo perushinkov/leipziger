@@ -1,0 +1,43 @@
+<div class="row h-25 fillHorizontal verticalGutter">
+  <div class="card shadow-sm fillHorizontal ">
+    <div class="card-header">
+      <span class="card-title">
+        <span class="appCardTitle">Albums</span>
+
+        <span *ngIf="editMode">
+          <span class="dragReminder">Drag an album into the editor</span>
+          <fa-icon [icon]="faEye" size="1x" class="appCardIcon float-sm-right"
+                   title="Back to browse mode"
+                   (click)="switchEditMode()"></fa-icon>
+        </span>
+        <span *ngIf="!editMode">
+          <span class="dragReminder">Drag and drop to Photos section</span>
+          <fa-icon [icon]="faEdit" size="1x" class="appCardIcon float-sm-right"
+                   title="Switch to edit mode"
+                   (click)="switchEditMode()"></fa-icon>
+        </span>
+      </span>
+    </div>
+    <div>
+      <button
+        class="albumEntity btn btn-secondary"
+        *ngFor="let album of albums; let albumIndex = index"
+        title="{{album.title}}"
+        draggable="true"
+        [hidden]="viewing[albumIndex]"
+        (dragstart)="attachAlbumToEvent($event, album)">
+        <span>{{album.title.substr(0, 12) + '...'}}</span>
+        <span *ngIf="editMode" class="badge badge-pill">
+          <fa-icon [icon]="faEdit" size="1x" class="albumEditIcon"></fa-icon>
+        </span>
+      </button>
+      <button *ngIf="editMode"
+              draggable="true"
+              (dragstart)="$event.dataTransfer.setData('text', '')"
+              class="albumEntity btn btn-info">New empty album</button>
+    </div>
+  </div>
+</div>
+<div class="row h-75 fillHorizontal">
+  <router-outlet></router-outlet>
+</div>
